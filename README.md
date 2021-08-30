@@ -1,6 +1,9 @@
 # mySpring- 手写spring
 最简易的流程，省去了 beanFactory 以及循环依赖等流程，仅是个demo，有利于熟悉spring的正常流程
 
+## spring ioc 主要流程
+class --> 推断构造方法  ---> 实例化 --> 对象 ----> 属性填充 --> afterPropertiesSet() (init)  --->  AOP --> Bean
+
 ## mySpring 流程
 * 入口 annotationConfigApplicationContext 注解配置解析器，传入配置，要扫描的包
 * 接下来： 
@@ -14,6 +17,7 @@
 * > 4.4 执行 BeanPostProcessor before 方法
 * > 4.5 执行 实现了 InitializingBean 接口的中 初始化对象的方法 afterPropertiesSet
 * > 4.7 执行 BeanPostProcessor after 方法
+  
 * > 4.8 返回bean
 
 
